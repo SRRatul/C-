@@ -1,21 +1,17 @@
 #include <iostream>
 using namespace std;
+double simple_interest (double principal, double rate, double time){
+    return (principal * rate * time)/100 ;
+}
 int main(){
-    int num1, num2, num3;
-    cout<<"Enter the first number: "<<endl;
-    cin>>num1;
-    cout<<"Enter the second number: "<<endl;
-    cin>>num2;
-    cout<<"Enter the third number: "<<endl;
-    cin>>num3;
-    if(num1 >= num2 && num1 >= num3){
-        cout<<"The largest number is "<<num1<<endl;
-    }
-    else if (num2 >= num3 && num2 >= num1){
-        cout<<"The largest number is "<<num2<<endl;
-    }
-    else{
-        cout<<"The largest number is " << num3<<endl;
-    }
+   double principal, rate, time;
+    cout<<"Enter your principal amount: ";
+    cin>>principal;
+    cout<<"Enter your interest rate (%) : ";
+    cin>>rate;
+    cout<<"Enter your time period (in years): ";
+    cin>>time;
+    double interest = simple_interest(principal, rate, time);
+    cout<<"Your interest is "<<interest<<" TK"<<endl;
     return 0;
 }
